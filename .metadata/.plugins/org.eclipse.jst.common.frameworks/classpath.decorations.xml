@@ -1,0 +1,7 @@
+<classpath>
+  <container id="project-jsp!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="/Users/viniciusbeletella/project-jsp001/project-jsp/WebContent/WEB-INF/lib/postgresql-42.2.5.jar">
+      <source-attachment-path>/project-jsp/WebContent/WEB-INF/lib/postgresql-42.2.5.jar</source-attachment-path>
+    </entry>
+  </container>
+</classpath>

@@ -1,0 +1,17 @@
+package dao;
+
+import java.sql.Connection;
+
+import db.SingleConnection;
+
+public class DaoLogin {
+	
+	private Connection connection;
+	
+	public DaoLogin() {
+		connection = SingleConnection.getConnection();
+		
+	}
+	
+
+}

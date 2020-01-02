@@ -1,0 +1,32 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import beans.BeansJsp;
+import db.SingleConnection;
+
+public class DaoUser {
+
+	private Connection connection;
+
+	public DaoUser() {
+		connection = SingleConnection.getConnection();
+	}
+
+	public void save(BeansJsp user)  {
+		
+		try {
+		
+		String sql = "Insert into public.user (login, password) values(?, ?)";
+		PreparedStatement insert = connection.prepareStatement(sql);
+		insert.setString(1, user.getLogin());
+		insert.setString(2, user.getLogin());
+		insert.execute();
+		
+		}catch (Exception e) {
+			connection.rollback();
+		}
+		
+	}
+}
